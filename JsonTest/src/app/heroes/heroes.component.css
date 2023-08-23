@@ -1,0 +1,176 @@
+/* HeroesComponent's private CSS styles */
+/* Place your CSS styles here */
+/* Place your CSS styles here */
+.table-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 1px; 
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 10%;
+  height: 20%;
+  margin-right: 10px; /* Add margin to create space between tables */
+}
+
+/* Remove margin from the last table to avoid extra spacing */
+table:last-child {
+  margin-right: 0;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 1px;
+  font-size: 12px; /* Adjust the font size as needed */
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+/* Place your CSS styles here */
+.fieldset-container {
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+}
+
+.fieldset {
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  padding: 10px;
+  width: 60%; /* Adjust the width as needed */
+  display: flex; /* Add this to make the fieldset flex container */
+}
+
+.legend {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.image {
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin-right: 50px;
+}
+
+/* Place your CSS styles here */
+.fieldset-container {
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+}
+
+.fieldset {
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  padding: 10px;
+  width: 60%; /* Adjust the width as needed */
+  display: flex; /* Add this to make the fieldset flex container */
+  justify-content: space-between; /* Space elements evenly along the row */
+  align-items: center; /* Align items vertically in the center */
+}
+
+.legend {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.variables {
+  font-size: 12px;
+  margin: 0; /* Remove the default margin to ensure precise alignment */
+}
+
+.button-container {
+  display: flex;
+  align-items: center; /* Align buttons vertically in the center */
+}
+
+button {
+  background-color: #3498db;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 5px 10px;
+  margin-left: 10px; /* Add some spacing between buttons */
+}
+
+.heroes {
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 0;
+  width: 100em;
+}
+
+.heroes li {
+  display: flex;
+}
+
+.heroes button {
+  flex: 1;
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  background-color: #EEE;
+  margin: .5em;
+  padding: 0;
+  border-radius: 4px;
+  display: flex;
+  align-items: stretch;
+  height: 1.8em;
+}
+
+.heroes button:hover {
+  color: #2c3a41;
+  background-color: #e6e6e6;
+  left: .1em;
+}
+
+.heroes button:active {
+  background-color: #525252;
+  color: #fafafa;
+}
+
+.heroes button.selected {
+  background-color: black;
+  color: white;
+}
+
+.heroes button.selected:hover {
+  background-color: #505050;
+  color: white;
+}
+
+.heroes button.selected:active {
+  background-color: black;
+  color: white;
+}
+
+.heroes .badge {
+  display: inline-block;
+  font-size: small;
+  color: white;
+  padding: 0.8em 0.7em 0 0.7em;
+  background-color: #405061;
+  line-height: 1em;
+  margin-right: .8em;
+  border-radius: 4px 0 0 4px;
+}
+
+.heroes .name {
+  align-self: center;
+}
+
+
+/*
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+*/

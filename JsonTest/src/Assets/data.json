@@ -1,0 +1,30 @@
+{
+  "sflist": {
+    "moduleInlist": ["OPSDI01", "OPSDI02"],
+    "channelIn": ["SafetyChannel1", "SafetyChannel2"],
+    "moduleOutList": ["OPSDO01", "OPSDO02"]
+  },
+  "panel": {
+    "inputParameters": {
+      "SDDIn": 300,
+      "SPTIN": 200,
+      "TPLIn": 1,
+      "FilterOn": 50,
+      "FilerOff": 20
+    },
+    "OutputParameters": {
+      "SDDOut": 350,
+      "SPTOut": 100,
+      "TPLOut": 1
+    },
+    "controllerParameters": {
+      "SDD": 200,
+      "TPL": 1
+    },
+    "srtValue": 1620,
+    "srtError": "",
+    "moduleInImagePath": "https://i.ibb.co/tK1bhQw/alien-head-4.png",
+    "moduleOutImagePath": "https://i.ibb.co/51MVD7K/alien-head-1.png",
+    "slcImagePath": "https://i.ibb.co/Gc7MBwf/alien-head-3.png"
+  }
+}

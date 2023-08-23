@@ -1,0 +1,110 @@
+<h2>My Heroes</h2>
+<ul class="heroes">
+  <li *ngFor="let hero of heroes">
+    <button
+      [class.selected]="hero === selectedHero"
+      type="button"
+      (click)="onSelect(hero)"
+    >
+      <span class="badge">{{ hero.id }}</span>
+      <span class="name">{{ hero.name }}</span>
+    </button>
+  </li>
+</ul>
+
+<div *ngIf="selectedHero">
+  <h2>{{ selectedHero.name | uppercase }} Details</h2>
+  <div>id: {{ selectedHero.id }}</div>
+  <div>
+    <label for="hero-name">Hero name: </label>
+    <input id="hero-name" [(ngModel)]="selectedHero.name" placeholder="name" />
+  </div>
+</div>
+
+<h2>My Heroes</h2>
+<ul class="heroes">
+  <select size="4">
+    <option
+      *ngFor="let hero of heroes"
+      value="{{ hero }}"
+      [class.selected]="hero === selectedHero"
+      (click)="onSelect(hero)"
+    >
+      {{ hero.id }}{{ hero.name }}
+    </option>
+  </select>
+
+  <select size="4" *ngIf="selectedHero">
+    <option *ngFor="let channel of selectedHero.Channels" [value]="channel">
+      {{ channel }}
+    </option>
+  </select>
+  <select size="4">
+    <option
+      *ngFor="let hero of heroes"
+      value="{{ hero }}"
+      [class.selected]="hero === selectedHero"
+      (click)="onSelectOut()"
+    >
+      {{ hero.id }}{{ hero.name }}
+    </option>
+  </select>
+</ul>
+
+<div class="table-container" >
+  <table *ngIf="showFirstTable">
+    <thead>
+      <tr>
+        <th>Parameters</th>
+        <th>Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let child of children">
+        <td>{{ child.id }}</td>
+        <td>{{ child.name }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <table *ngIf="showSecondTable">
+    <thead>
+      <tr>
+        <th>Parameters</th>
+        <th>Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let child of children">
+        <td>{{ child.id }}</td>
+        <td>{{ child.name }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="fieldset-container">
+  <fieldset class="fieldset">
+    <legend class="legend">Images</legend>
+    <img [src]="inputImagePath" alt="Image 1" class="image" />
+    <img [src]="channelImagePath" alt="Image 2" class="image" />
+    <img [src]="outputImagePath" alt="Image 3" class="image" />
+  </fieldset>
+
+  
+</div>
+<div>
+<fieldset class="fieldset">
+  <legend class="legend">Response Time</legend>
+  <p class="variables">Variable 1: {{ variable1 }}</p>
+  <p class="variables">Variable 2: {{ variable2 }}</p>
+  <div class="button-container">
+    <button >Close</button>
+    <button >Help</button>
+  </div>
+</fieldset>
+</div>
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->
